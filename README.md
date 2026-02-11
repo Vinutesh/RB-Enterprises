@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# RB Enterprises Website (React + TypeScript + Vite)
 
-## Project info
+Premium multi-page enterprise website scaffold for:
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+- **RB Enterprises** (hardware + bulk orders)
+- **RB Interiors** (interior services + portfolio)
 
-## How can I edit this code?
+## Tech Stack
 
-There are several ways of editing your application.
+- Vite
+- React 18
+- TypeScript
+- React Router
+- Tailwind CSS
 
-**Use Lovable**
+## Project Structure
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+```txt
+src/
+  components/
+    site/
+  pages/
+  routes/
+  data/
+  styles/
+  utils/
+```
 
-Changes made via Lovable will be committed automatically to this repo.
+## Primary Routes
 
-**Use your preferred IDE**
+- `/` Home
+- `/about` About
+- `/rb-enterprises` RB Enterprises (Hardware)
+- `/rb-interiors` RB Interiors (Services + Portfolio preview)
+- `/portfolio` Portfolio (filtered gallery)
+- `/services` Services detail page
+- `/studio` Studio / brand story
+- `/contact` Contact + enquiry form
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Enquiry Flow
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The contact form is implemented as a client-side serverless flow:
 
-Follow these steps:
+1. Opens WhatsApp prefilled message to `+91 9999999999`
+2. Triggers a `mailto:` draft to `test@gmail.com`
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Fields included:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Name
+- Phone
+- Email
+- Project Type
+- Budget
+- Inquiry Type
+- Message
 
-# Step 3: Install the necessary dependencies.
-npm i
+Lead flow note (“site visit first”) is included in messaging and UI.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Getting Started
+
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Build & Preview
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+npm run preview
+```
 
-**Use GitHub Codespaces**
+## Vercel Deployment
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This Vite app is ready for Vercel:
 
-## What technologies are used for this project?
+1. Import the repository in Vercel.
+2. Framework preset: **Vite**.
+3. Build command: `npm run build`.
+4. Output directory: `dist`.
 
-This project is built with:
+## Placeholder Assets
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Portfolio currently uses Unsplash placeholders. Replace URLs in:
 
-## How can I deploy this project?
+- `src/data/siteContent.ts`
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Also replace testimonial, team, and brand placeholder text in relevant page files when final content is available.
